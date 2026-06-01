@@ -1,0 +1,19 @@
+I first created the repository and intialized it with git using git init.
+I then created the README.md file in the project and added the text.
+I staged and committed the file using git add and commit.
+I then use the command line to switch and create a new branch using git switch -c feature/add-test-plan.
+I added the test-plan.md file with the text and staged and committed it.
+I added the test-cases.md file with the text and staged and committed it.
+I published the feature/add-test-plan branch.
+I went to each branch in github to confirm that main had one file while feature/add-test-plan branch had all 3.
+I switched my branch back to main and confirmed there was only one file in the directory and it was the README.md
+The other files are in the other branch.
+I added the team section to main, and staged and committed it.
+I then used git merge feature/add-test-plan  to merge the feature branch into main.
+I did git branch -d feature/add-test-plan to delete the branch.
+I did git switch -c feature/update-test-plan to create the new branch and switch to it.
+I updated the scope text.
+I staged and committed test-plan.md
+I switched to master and changed the text under scope and committed it.
+I merged the feature branch into main and resolved the merge conflict.
+I then staged and committed the final result.
