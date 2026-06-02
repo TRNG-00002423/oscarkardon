@@ -1,4 +1,7 @@
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
 df = pd.read_csv("test_data.csv")
 
 
@@ -53,3 +56,13 @@ for _, row in df.iterrows():
 
 df.sort_values("duration_ms", ascending=False, inplace=True)
 df.to_csv("output/results_sorted.csv", index=False)
+
+#Stretch 
+test_duration_std = np.std(df["duration_ms"])
+print(f"Test Duration Standard Deviation: {test_duration_std:.2f}ms")
+
+for module, group in df.groupby("module"):
+    counts = group["status"].value_counts()
+    counts.plot.bar(title=module, figsize=(4,3))
+    plt.show()
+
