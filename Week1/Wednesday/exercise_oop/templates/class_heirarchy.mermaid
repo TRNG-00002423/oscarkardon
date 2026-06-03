@@ -1,0 +1,41 @@
+classDiagram
+    class TestCase {
+        Class Variables: 
+            total_created 
+        Instance Variables:
+            name 
+            description 
+            priority 
+            tags 
+        Methods:
+            run
+            from_dict @classmethod
+            is_valid_name @staticmethod
+    }
+    class TestResult {
+        Instance Variables:
+                test_name 
+                status 
+                duration_ms
+                error_message 
+        Methods: 
+            summary(self) : Return summary
+    }
+    TestSuite contains TestCase objects
+    class TestSuite {
+        Instance Variables:
+            name
+            tests
+        Methods:
+            add_test(test): Add a TestCase
+            remove_test(name): Remove by name
+            get_by_priority(priority): Return tests matching the priority
+            count(): Return number of tests
+    }
+    TestRunner runs a TestSuite
+    TestRunner uses TestResult
+    class TestRunner {
+        Methods: 
+            run(suite): Run all tests in a suite, return list of TestResult
+            summary(results): Print a formatted summary
+    }
