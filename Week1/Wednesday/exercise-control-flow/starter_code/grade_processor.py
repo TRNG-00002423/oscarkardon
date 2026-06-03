@@ -1,8 +1,10 @@
-scores = [88, 92, 75, -1, 63, 95, 81, 70, -5, 55, 100, 78, -999, 90, 85]
+#scores = [88, 92, 75, -1, 63, 95, 81, 70, -5, 55, 100, 78, -999, 90, 85]
+import pandas as pd
+scores = pd.read_csv("grade_processor_file.csv")
 valid_scores = []
 grades = []
 
-for index, score in enumerate(scores):
+for index, score in enumerate(scores["score"]):
     if score == -999:
         print("Sentinel value encountered. Stopping processing.")
         break
