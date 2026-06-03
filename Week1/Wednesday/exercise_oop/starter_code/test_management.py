@@ -93,6 +93,9 @@ class TestSuite:
     
     def count(self):
         return len(self.tests)
+    
+    def __len__(self):
+        return len(self.tests)
 
     
     
@@ -153,6 +156,7 @@ def main():
     results = runner.run(testSuite)
     print("Test Summaries")
     runner.summary(results)
+    print(f"Length of test suite: {len(testSuite)}")
 
 
 if __name__ == "__main__":
