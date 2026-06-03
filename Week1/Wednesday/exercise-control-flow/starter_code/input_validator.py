@@ -1,3 +1,4 @@
+#Input Validator
 def validate_password(password):
     returnDict = {
         "is_valid": True,
