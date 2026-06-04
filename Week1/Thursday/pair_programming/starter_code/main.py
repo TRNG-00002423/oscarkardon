@@ -85,25 +85,39 @@ def main():
     # Use try/except to catch InsufficientStockError and print the error details.
     # Access e.requested and e.available from the exception object.
     try:
-        inv.sell("Staplers", 10)
+        inv.sell(5,1)
+        inv.sell(5, 10)
     except InsufficientStockError as e:
-        print({e})
+        print(f"❌ {e}")
+        print(f"   Requested: {e.requested}, Available: {e.available}")
 
     # ── 6. Access a non-existent product ID ───────────────────────────────
     section("6. Non-Existent Product Lookup")
 
     # TODO: Try inv.get_product(9999) and catch ProductNotFoundError.
+    try:
+        inv.get_product(99999)
+    except ProductNotFoundError as e:
+        print(f"❌ {e}")
+
 
     # ── 7. Transaction history ────────────────────────────────────────────
     section("7. Recent Transaction History")
 
     # TODO: Print each entry in inv.history.
     # Remember: history is a deque — you can iterate over it directly.
+    for transactions in inv.history:
+        print(transactions)
+
 
     # ── 8. Inventory summary ──────────────────────────────────────────────
     section("8. Inventory Summary")
 
     # TODO: Call inv.summary() and print each key-value pair neatly.
+    summary = inv.summary()
+    print(f"Entry               Content")
+    for key,value in summary.items():
+        print(f"{key:<19} : {value}")
 
     # ── 9. Set operations on categories ───────────────────────────────────
     section("9. Set Operations on Categories")
@@ -115,6 +129,14 @@ def main():
     #   - Intersection: Categories in BOTH my_wishlist and the inventory
     #   - Difference:   Categories in my_wishlist but NOT in the inventory
     # Use the |, &, - operators (ref: written/4-Thursday/sets.md)
+    
+    my_union = my_wishlist | (inv.categories)
+    my_intersection = my_wishlist & (inv.categories)
+    my_difference = my_wishlist - (inv.categories)
+
+    print(f"My wishlist and inventory categories: {my_union}")
+    print(f"My wishlist categories in inventory {my_intersection}")
+    print(f"My wishlist categories not in inventory {my_difference}")
 
     # ── 10. Tuple-based product configurations ────────────────────────────
     section("10. Product Configs as Tuples")
@@ -130,6 +152,16 @@ def main():
     # This demonstrates tuples as immutable, structured data records.
     # (ref: written/4-Thursday/tuples.md — "Tuples as Fixed Records")
 
+    configs = [
+        ("Monitor", 349.99, 8, "electronics"),
+        ("USB Hub",  24.99, 30, "accessories"),
+        ("T-Shirt", 50.00, 100, "clothing")
+    ]
+    print(len(inv))
+    for product_config in configs:
+        product = Product(*product_config)
+        inv.add_product(product)
+    print(len(inv))
 
 if __name__ == "__main__":
     main()
