@@ -53,7 +53,16 @@ class Inventory:
             5. Increment self._next_id.
             6. Return the assigned ID.
         """
-        pass  # TODO
+        self.products[self._next_id] = product
+
+        self.categories.add(product.category)
+
+        self.history.append(f"ADD: {product.name} (ID={self._next_id})")
+        
+        self._next_id += 1
+
+        return self._next_id - 1
+
 
     def remove_product(self, product_id: int) -> Product:
         """Remove a product by ID and return it.
@@ -67,7 +76,13 @@ class Inventory:
             3. Append to history: "REMOVE: {product.name} (ID={product_id})"
             4. Return the removed product.
         """
-        pass  # TODO
+        if product_id not in self.products:
+            raise ProductNotFoundError(product_id)
+        
+        product = self.products.pop(product_id)
+        self.history.append(f"REMOVE: {product.name} (ID={product_id})")
+
+        return product
 
     def get_product(self, product_id: int) -> Product:
         """Retrieve a product by ID without removing it.
@@ -75,7 +90,10 @@ class Inventory:
         Raises:
             ProductNotFoundError: If product_id is not in self.products.
         """
-        pass  # TODO
+        if product_id not in self.products:
+            raise ProductNotFoundError(product_id)
+        
+        return self.products[product_id]
 
     def sell(self, product_id: int, quantity: int) -> None:
         """Sell units of a product, reducing its stock.
@@ -90,7 +108,15 @@ class Inventory:
             3. Reduce product.stock by quantity.
             4. Append to history: "SELL: {quantity}x {product.name} (ID={product_id})"
         """
-        pass  # TODO
+        
+        product = self.get_product(product_id)
+
+        if product.stock < quantity:
+            raise InsufficientStockError(product.name, quantity, product.stock)
+        
+        product.stock -= quantity
+        self.history.append(f"SELL: {quantity}x {product.name} (ID={product_id})")
+        
 
     def restock(self, product_id: int, quantity: int) -> None:
         """Add stock to an existing product.
@@ -103,7 +129,11 @@ class Inventory:
             2. Increase product.stock by quantity.
             3. Append to history: "RESTOCK: +{quantity} {product.name} (ID={product_id})"
         """
-        pass  # TODO
+        product = self.get_product(product_id)
+        
+        product.stock += quantity
+
+        self.history.append(f"RESTPCL: +{quantity} {product.name} (ID={product_id})")
 
     # ── Comprehension-Powered Queries ─────────────────────────────────────────
 
@@ -113,14 +143,14 @@ class Inventory:
         Hint: Use __contains__ dunder on Product — "keyword" in product
         Use a list comprehension over self.products.values().
         """
-        pass  # TODO
+        return  [product for product in self.products.values() if keyword in product]
 
     def by_category(self, category: str) -> list[Product]:
         """Return all products in the given category (case-insensitive).
 
         Use a list comprehension. Compare category.lower() to product.category.lower().
         """
-        pass  # TODO
+        return [product for product in self.products.values() if category == product.category]
 
     def in_stock(self) -> list[Product]:
         """Return all products with stock > 0.
@@ -128,14 +158,14 @@ class Inventory:
         Hint: Use __bool__ dunder on Product — bool(product) is True if in stock.
         Use a list comprehension with the bool() check.
         """
-        pass  # TODO
+        return [product for product in self.products.value() if product]
 
     def price_range(self, min_price: float, max_price: float) -> list[Product]:
         """Return products priced between min_price and max_price (inclusive).
 
         Use a list comprehension.
         """
-        pass  # TODO
+        return [product for product in self.products.values() if product.price >= min_price and product.price <=max_price]
 
     def summary(self) -> dict:
         """Return a summary dictionary of the inventory.
@@ -150,7 +180,10 @@ class Inventory:
 
         Use dict/list/generator comprehensions — avoid raw for loops.
         """
-        pass  # TODO
+        return {"total_products" : len(self.products),
+                "total_value" : sum(product.price * product.stock for product in self.products.values()),
+                "categories" : list(sorted(self.categories)),
+                "out_of_stock_count" : sum(1 for product in self.products.values() if product.stock == 0)}
 
     def __len__(self) -> int:
         """Return the number of products in the inventory."""

@@ -36,23 +36,47 @@ def main():
     #   p = Product("Laptop", 999.99, stock=15, category="electronics")
     #   product_id = inv.add_product(p)
     #   print(f"  Added: {p} → ID={product_id}")
+    inv.add_product(Product("Laptop", 999.99, stock=15, category="electronics"))
+    inv.add_product(Product("Laptop 2", 1099.99, stock=5, category="electronics"))
+    inv.add_product(Product("Mouse", 29.99, stock=50, category="electronics"))
+    p4 = Product("Notebook", 5.99, stock=0, category="stationery")
+    p5 = Product("Stapler", 10000.99, stock=2, category="stationery")
+    p6 = Product("Monitor", 65.99, stock=23, category="electronics")
+    p7 = Product("T-Shirt", 75.99, stock=23, category="clothing")
+    p8 = Product("Pro Pants", 99.99, stock=23, category="clothing")
+    inv.add_product(p4)
+    inv.add_product(p5)
+    inv.add_product(p6)
+    inv.add_product(p7)
+    inv.add_product(p8)
+
+
+
+
 
     # ── 2. Display all products sorted by price ────────────────────────────
     section("2. All Products (sorted by price)")
 
     # TODO: Use sorted() with the __lt__ dunder to sort inv.products.values().
     # Print each product using its __str__ representation.
+    sorted_list = sorted(inv.products.values())
+    for product in sorted_list:
+        print(product)
+
 
     # ── 3. Search products by keyword ─────────────────────────────────────
     section("3. Search: 'pro'")
 
     # TODO: Call inv.search("pro") and print the results.
     # This uses the __contains__ dunder on Product.
+    search = inv.search("pro")
+    print(search)
 
     # ── 4. Filter by category ─────────────────────────────────────────────
     section("4. Category: 'electronics'")
 
     # TODO: Call inv.by_category("electronics") and print the results.
+    print(inv.by_category("electronics"))
 
     # ── 5. Sell products — one should succeed, one should fail ────────────
     section("5. Sell Operations")
@@ -60,6 +84,10 @@ def main():
     # TODO: Attempt to sell a quantity that succeeds, then one that exceeds stock.
     # Use try/except to catch InsufficientStockError and print the error details.
     # Access e.requested and e.available from the exception object.
+    try:
+        inv.sell("Staplers", 10)
+    except InsufficientStockError as e:
+        print({e})
 
     # ── 6. Access a non-existent product ID ───────────────────────────────
     section("6. Non-Existent Product Lookup")
