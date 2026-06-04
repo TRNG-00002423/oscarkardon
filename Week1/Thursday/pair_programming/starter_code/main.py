@@ -163,5 +163,41 @@ def main():
         inv.add_product(product)
     print(len(inv))
 
+    section("11. Sell all remaining stock")
+    remaining = inv.get_product(5).stock
+    print(inv.get_product(5).stock)
+    print(remaining)
+    inv.sell(5, remaining)
+    print(inv.get_product(5).stock)
+
+    section("12. Remove a product and try to sell")
+    inv.remove_product(4)
+    try:
+        inv.sell(4, 1)
+    except ProductNotFoundError as e:
+        print(e)
+
+
+    section("12. Add duplicates")
+    print(inv.add_product(Product("Duplicate", 999.99, stock=15, category="electronics")))
+    print(inv.add_product(Product("Duplicate", 999.99, stock=15, category="electronics")))
+    print("Duplicates added")
+
+    section("13. Restock nonexistant product")
+    
+    try: 
+        inv.restock(100, 200)
+    except ProductNotFoundError as e:
+        print(e)
+    
+    section("14. Search case insensitive categories")
+    print(inv.by_category("ELECTRONICS"))
+    print(inv.by_category("electronics"))
+
+
+
+
+
+
 if __name__ == "__main__":
     main()
