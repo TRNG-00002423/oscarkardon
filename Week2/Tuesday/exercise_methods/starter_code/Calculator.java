@@ -1,3 +1,5 @@
+package Week2.Tuesday.exercise_methods.starter_code;
+
 /**
  * Week 2 Exercise — Calculator with static methods and overloads.
  *
