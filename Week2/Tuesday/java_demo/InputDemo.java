@@ -7,5 +7,6 @@ public class InputDemo {
         String name;
         name = sc.next();
         System.out.println("Welcome: " + name);
+        sc.close();
     }
 }
