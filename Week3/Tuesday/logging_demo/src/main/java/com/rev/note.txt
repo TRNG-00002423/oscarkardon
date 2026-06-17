@@ -1,0 +1,5 @@
+Loggers - Object that are responsible for logging events
+Appenders - Destination where the logs go
+Encoders - Object responsible for converting an event into a byte array and the formatting of a log
+SLF4J - Simple logging facade 4 Java, provides API for logging
+Logback implements SLF4J
