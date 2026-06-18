@@ -57,3 +57,30 @@
 2026-06-18 11:25:38,728 DEBUG com.rev.partner_b.TaskQueueApp - Task [priority=3, description=Exercises] polled
 2026-06-18 11:25:38,729 DEBUG com.rev.partner_b.TaskQueueApp - Task [priority=4, description=Work] polled
 2026-06-18 11:25:38,731 DEBUG com.rev.partner_b.TaskQueueApp - Task [priority=5, description=Watch WC] polled
+2026-06-18 13:18:53,730 [main] INFO  pair.a.words - Paragraph split into words
+2026-06-18 13:18:53,741 [main] DEBUG pair.a.words - Processing word: hello
+2026-06-18 13:18:53,745 [main] DEBUG pair.a.words - Processing word: my
+2026-06-18 13:18:53,745 [main] DEBUG pair.a.words - Processing word: name
+2026-06-18 13:18:53,746 [main] DEBUG pair.a.words - Processing word: is
+2026-06-18 13:18:53,747 [main] DEBUG pair.a.words - Processing word: oscar
+2026-06-18 13:18:53,747 [main] DEBUG pair.a.words - Processing word: i
+2026-06-18 13:18:53,747 [main] DEBUG pair.a.words - Processing word: am
+2026-06-18 13:18:53,748 [main] DEBUG pair.a.words - Processing word: and
+2026-06-18 13:18:53,748 [main] DEBUG pair.a.words - Processing word: recently
+2026-06-18 13:18:53,749 [main] DEBUG pair.a.words - Processing word: graduated
+2026-06-18 13:18:53,750 [main] DEBUG pair.a.words - Processing word: from
+2026-06-18 13:18:53,751 [main] DEBUG pair.a.words - Processing word: elon
+2026-06-18 13:18:53,751 [main] DEBUG pair.a.words - Processing word: university
+2026-06-18 13:18:53,752 [main] DEBUG pair.a.words - Processing word: i
+2026-06-18 13:18:53,752 [main] DEBUG pair.a.words - Processing word: am
+2026-06-18 13:18:53,752 [main] DEBUG pair.a.words - Processing word: doing
+2026-06-18 13:18:53,753 [main] DEBUG pair.a.words - Processing word: training
+2026-06-18 13:18:53,753 [main] DEBUG pair.a.words - Processing word: at
+2026-06-18 13:18:53,753 [main] DEBUG pair.a.words - Processing word: revature
+2026-06-18 13:18:53,759 [main] INFO  pair.a.words - Word count sorted
+2026-06-18 13:18:53,761 [main] DEBUG pair.a.words - i for 2
+2026-06-18 13:18:53,762 [main] DEBUG pair.a.words - am for 2
+2026-06-18 13:18:53,763 [main] DEBUG pair.a.words - oscar for 1
+2026-06-18 13:18:53,769 [main] INFO  pair.a.words - Displayed top3 words by count
+2026-06-18 13:18:53,773 [main] INFO  pair.a.words - Added all words to tree set
+2026-06-18 13:19:54,360 [main] WARN  pair.b.tasks - Warning test

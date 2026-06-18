@@ -1,24 +1,28 @@
 <configuration>
 
-    <!-- Console output -->
     <appender name="CONSOLE"
               class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d %-5level %logger - %msg%n</pattern>
+            <pattern>%d [%thread] %-5level %logger - %msg%n</pattern>
         </encoder>
     </appender>
 
-    <!-- File output -->
     <appender name="FILE"
               class="ch.qos.logback.core.FileAppender">
         <file>logs/pair.log</file>
         <append>true</append>
         <encoder>
-            <pattern>%d %-5level %logger - %msg%n</pattern>
+            <pattern>%d [%thread] %-5level %logger - %msg%n</pattern>
         </encoder>
     </appender>
 
-    <root level="DEBUG">
+    <!-- Partner A logger -->
+    <logger name="pair.a.words" level="DEBUG" />
+
+    <!-- Partner B logger -->
+    <logger name="pair.b.tasks" level="WARN" />
+
+    <root level="INFO">
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="FILE"/>
     </root>

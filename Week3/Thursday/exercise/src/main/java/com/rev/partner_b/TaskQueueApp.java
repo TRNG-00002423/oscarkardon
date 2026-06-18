@@ -9,12 +9,13 @@ import org.slf4j.LoggerFactory;
 
 /** Partner B — drain PriorityQueue in priority order. */
 public class TaskQueueApp {
-    private static final Logger logger =LoggerFactory.getLogger(TaskQueueApp.class);
+    private static final Logger logger = LoggerFactory.getLogger("pair.b.tasks");
+
     public static void main(String[] args) {
         logger.info("Partner B program is running");
         Queue<Task> q = new PriorityQueue<>();
         logger.info("Tasks are offered to queue");
-        // TODO: offer tasks out of order, poll and print, peek demo
+
         q.offer(new Task(5, "Watch WC"));
         q.offer(new Task(2, "Study"));
         q.offer(new Task(3, "Exercises"));
@@ -30,6 +31,6 @@ public class TaskQueueApp {
             logger.debug(task + " polled");
 
         }
-
+        logger.warn("Warning test");
     }
 }

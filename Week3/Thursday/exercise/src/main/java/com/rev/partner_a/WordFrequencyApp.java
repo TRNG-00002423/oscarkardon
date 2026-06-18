@@ -16,7 +16,7 @@ import org.slf4j.LoggerFactory;
  */
 public class WordFrequencyApp {
 
-    private static final Logger logger = LoggerFactory.getLogger(WordFrequencyApp.class);
+    private static final Logger logger = LoggerFactory.getLogger("pair.a.words");
 
 
     public static void main(String[] args) {
