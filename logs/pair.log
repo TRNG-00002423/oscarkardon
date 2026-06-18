@@ -1,0 +1,59 @@
+2026-06-17 14:19:52,631 INFO  com.rev.partner_a.WordFrequencyApp - Paragraph split into words
+2026-06-17 14:19:52,639 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: hello
+2026-06-17 14:19:52,642 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: my
+2026-06-17 14:19:52,642 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: name
+2026-06-17 14:19:52,642 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: is
+2026-06-17 14:19:52,642 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: oscar
+2026-06-17 14:19:52,643 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: i
+2026-06-17 14:19:52,643 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: am
+2026-06-17 14:19:52,645 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: and
+2026-06-17 14:19:52,646 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: recently
+2026-06-17 14:19:52,647 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: graduated
+2026-06-17 14:19:52,648 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: from
+2026-06-17 14:19:52,648 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: elon
+2026-06-17 14:19:52,648 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: university
+2026-06-17 14:19:52,649 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: i
+2026-06-17 14:19:52,649 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: am
+2026-06-17 14:19:52,650 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: doing
+2026-06-17 14:19:52,650 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: training
+2026-06-17 14:19:52,651 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: at
+2026-06-17 14:19:52,651 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: revature
+2026-06-17 14:19:52,655 INFO  com.rev.partner_a.WordFrequencyApp - Word count sorted
+2026-06-17 14:19:52,657 DEBUG com.rev.partner_a.WordFrequencyApp - i for 2
+2026-06-17 14:19:52,659 DEBUG com.rev.partner_a.WordFrequencyApp - am for 2
+2026-06-17 14:19:52,659 DEBUG com.rev.partner_a.WordFrequencyApp - oscar for 1
+2026-06-17 14:19:52,664 INFO  com.rev.partner_a.WordFrequencyApp - Displayed top3 words by count
+2026-06-17 14:19:52,667 INFO  com.rev.partner_a.WordFrequencyApp - Added all words to tree set
+2026-06-17 14:53:43,102 INFO  com.rev.partner_a.WordFrequencyApp - Paragraph split into words
+2026-06-17 14:53:43,116 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: hello
+2026-06-17 14:53:43,123 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: my
+2026-06-17 14:53:43,124 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: name
+2026-06-17 14:53:43,126 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: is
+2026-06-17 14:53:43,127 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: oscar
+2026-06-17 14:53:43,128 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: i
+2026-06-17 14:53:43,128 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: am
+2026-06-17 14:53:43,130 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: and
+2026-06-17 14:53:43,133 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: recently
+2026-06-17 14:53:43,135 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: graduated
+2026-06-17 14:53:43,137 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: from
+2026-06-17 14:53:43,138 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: elon
+2026-06-17 14:53:43,139 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: university
+2026-06-17 14:53:43,143 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: i
+2026-06-17 14:53:43,145 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: am
+2026-06-17 14:53:43,147 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: doing
+2026-06-17 14:53:43,149 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: training
+2026-06-17 14:53:43,150 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: at
+2026-06-17 14:53:43,151 DEBUG com.rev.partner_a.WordFrequencyApp - Processing word: revature
+2026-06-17 14:53:43,208 INFO  com.rev.partner_a.WordFrequencyApp - Word count sorted
+2026-06-17 14:53:43,212 DEBUG com.rev.partner_a.WordFrequencyApp - i for 2
+2026-06-17 14:53:43,217 DEBUG com.rev.partner_a.WordFrequencyApp - am for 2
+2026-06-17 14:53:43,222 DEBUG com.rev.partner_a.WordFrequencyApp - oscar for 1
+2026-06-17 14:53:43,230 INFO  com.rev.partner_a.WordFrequencyApp - Displayed top3 words by count
+2026-06-17 14:53:43,245 INFO  com.rev.partner_a.WordFrequencyApp - Added all words to tree set
+2026-06-18 11:25:38,673 INFO  com.rev.partner_b.TaskQueueApp - Partner B program is running
+2026-06-18 11:25:38,685 INFO  com.rev.partner_b.TaskQueueApp - Tasks are offered to queue
+2026-06-18 11:25:38,715 INFO  com.rev.partner_b.TaskQueueApp - Peek queue method used
+2026-06-18 11:25:38,727 DEBUG com.rev.partner_b.TaskQueueApp - Task [priority=2, description=Study] polled
+2026-06-18 11:25:38,728 DEBUG com.rev.partner_b.TaskQueueApp - Task [priority=3, description=Exercises] polled
+2026-06-18 11:25:38,729 DEBUG com.rev.partner_b.TaskQueueApp - Task [priority=4, description=Work] polled
+2026-06-18 11:25:38,731 DEBUG com.rev.partner_b.TaskQueueApp - Task [priority=5, description=Watch WC] polled
