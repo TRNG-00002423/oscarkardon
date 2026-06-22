@@ -1,0 +1,50 @@
+---
+id: 8d263edb-e35b-47f4-8b52-820f70324994
+---
+erDiagram
+    CUSTOMER {
+        int customer_id PK
+        string email UK
+        string phone
+        datetime created_at
+    }
+
+    ADDRESS {
+        int address_id PK
+        int customer_id FK
+        string street
+        string city
+        string state
+        string zip_code
+        string country
+    }
+
+    PRODUCT {
+        int product_id PK
+        string sku UK
+        string name
+        decimal current_price
+        int stock_on_hand
+    }
+
+    ORDERS {
+        int order_id PK
+        int customer_id FK
+        int shipping_address_id FK
+        datetime order_date
+        string status
+    }
+
+    ORDER_LINE {
+        int order_line_id PK
+        int order_id FK
+        int product_id FK
+        int quantity
+        decimal unit_price
+    }
+
+    CUSTOMER ||--o{ ADDRESS : has
+    CUSTOMER ||--o{ ORDERS : places
+    ADDRESS ||--o{ ORDERS : ships_to
+    ORDERS ||--o{ ORDER_LINE : contains
+    PRODUCT ||--o{ ORDER_LINE : appears_in

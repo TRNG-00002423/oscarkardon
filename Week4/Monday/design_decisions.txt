@@ -1,0 +1,5 @@
+I made 5 tables to contain all the data required for this use case. A customer can have multiple adresses which is why Customers 
+-> Adresses is a one to many relationship. A customer can also have multiple orders so there is a one to many relationship with Customers to 
+orders. Email must be unique in cutomers. SKU is also unique in Product. 
+A direct many to many relationship between Orders and Product would not be able to contain information such as the quantity of the order and the 
+price at the time of the order since price could change in the future. 
